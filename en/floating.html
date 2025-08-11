@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating - Viads Demo</title>
+    <meta name="description" content="Fixed-position unit that stays visible. Demo page for Viads ad integration.">
+    <meta name="canonical" content="/en/floating">
+    <meta property="og:title" content="Floating - Viads Demo">
+    <meta property="og:description" content="Fixed-position unit that stays visible. Demo page for Viads ad integration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/en/floating">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="../assets/logo.svg" alt="Viads" width="120" height="35">
+            </a>
+            
+            <nav class="nav">
+                <a href="/en/in-page" class="nav-link">In-Page</a>
+                <a href="/en/slider" class="nav-link">Slider</a>
+                <a href="/en/floating" class="nav-link" aria-current="page">Floating</a>
+                <a href="/en/banner" class="nav-link">Display</a>
+            </nav>
+            
+            <select class="language-switcher">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="pt">Português</option>
+                <option value="tr">Türkçe</option>
+            </select>
+        </div>
+    </header>
+
+    <main id="main-content" class="main">
+        <h1 class="page-title">Floating</h1>
+        <p class="page-subtitle">A hybrid ad format that merges the advantages of both slider and in-page formats.</p>
+        
+        <article class="content-section">
+            <h3>Characteristics:</h3>
+            
+            <h4>1. Visibility:</h4>
+            <p class="article-text">
+                It remains visible on the screen even as the user scrolls up or down the page, ensuring higher visibility compared to static ads.
+            </p>
+            
+            <h4>2. Positioning:</h4>
+            <p class="article-text">
+                It will appear in various positions on the webpage, such as in corners or in the center. The position is fixed by default until user starts scrolling, meaning it follows as user scrolls. You will see a demo example that will appear in between text.
+            </p>
+            
+            <h4>3. Size and Dimensions:</h4>
+            <p class="article-text">
+                These ads are smaller in size compared to other video ad formats to prevent them from becoming too intrusive. The size is adjustable, allowing users to minimize or maximize the video window.
+            </p>
+            
+            <h4>4. Content:</h4>
+            <p class="article-text">
+                These ads contain video content, which can range from product advertisements to promotional videos, with a clear call-to-action (CTA) to encourage user engagement.
+            </p>
+            
+            <h3>User Interaction:</h3>
+            <h4>1. Closeable:</h4>
+            <p class="article-text">
+                Users have the option to close the ad if they wish to, which helps in maintaining a user-friendly experience.
+            </p>
+            
+            <h4>2. Clickable:</h4>
+            <p class="article-text">
+                The ads are clickable, redirecting users to a specific landing page when clicked.
+            </p>
+            
+            <h4>3. Mute/Unmute Option:</h4>
+            <p class="article-text">
+                These ads come with an option for users to mute or unmute the audio.
+            </p>
+            
+            <h4>4. Controls:</h4>
+            <p class="article-text">
+                Users can have control over the video playback, with options to play, pause, or rewind the video.
+            </p>
+            
+            <!-- Primary Ad Container -->
+            <div id="viads-slot" 
+                 data-viads-format="floating" 
+                 data-viads-lang="en" 
+                 data-viads-site="placeholder" 
+                 data-viads-page="floating">
+            </div>
+            <div id="viads-fallback" hidden></div>
+            
+            <h3>Analytics and Tracking:</h3>
+            <h4>1. Impression Tracking:</h4>
+            <p class="article-text">
+                Advertisers can track the number of times the ad has been viewed (impressions).
+            </p>
+            
+            <h4>2. Interaction Tracking:</h4>
+            <p class="article-text">
+                Advertisers can also track various user interactions with the ad, such as; clicks, video views, and closes to gauge the ad's performance.
+            </p>
+            
+            <h4>3. Viewability Metrics:</h4>
+            <p class="article-text">
+                These ads come with viewability metrics to help advertisers understand how much of their ad was viewed and for how long.
+            </p>
+            
+            <h3>Technical Aspects:</h3>
+            <h4>1. Responsive Design:</h4>
+            <p class="article-text">
+                It has a responsive design to adapt to various screen sizes and devices.
+            </p>
+            
+            <h4>2. Loading Time:</h4>
+            <p class="article-text">
+                To prevent a negative user experience, these ads are optimized to have minimal loading time.
+            </p>
+            
+            <h4>3. Coding:</h4>
+            <p class="article-text">
+                It's been coded using HTML5, CSS, and JavaScript to enable smooth integration with web pages and compatibility with modern browsers.
+            </p>
+            
+            <h3>Compliance and Best Practices:</h3>
+            <h4>1. Privacy Compliance:</h4>
+            <p class="article-text">
+                It complies with privacy regulations and guidelines, which might include giving users the option to opt-out of data collection.
+            </p>
+            
+            <h4>2. User Experience:</h4>
+            <p class="article-text">
+                Advertisers balance capturing user attention with maintaining a positive user experience, avoiding overly intrusive or disruptive ad formats.
+            </p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Terms</a>
+            </div>
+            <div class="footer-copyright">
+                <span class="footer-year">2024</span> © Viads
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+    
+    <!-- Viads Production Loader (to be enabled by Viads) 
+    <script
+        id="viads-loader"
+        src="https://cdn.viads.com/loader.min.js"
+        data-site=""
+        data-lang=""
+        defer
+    ></script>
+    -->
+</body>
+</html>

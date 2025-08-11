@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner estándar - Viads Demo</title>
+    <meta name="description" content="Ubicaciones IAB clásicas con tamaño responsive. Página de demostración para la integración de anuncios Viads.">
+    <meta name="canonical" content="/es/banner">
+    <meta property="og:title" content="Banner estándar - Viads Demo">
+    <meta property="og:description" content="Ubicaciones IAB clásicas con tamaño responsive. Página de demostración para la integración de anuncios Viads.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/es/banner">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="../assets/logo.svg" alt="Viads" width="120" height="35">
+            </a>
+            
+            <nav class="nav">
+                <a href="/es/in-page" class="nav-link">In-Page</a>
+                <a href="/es/slider" class="nav-link">Slider</a>
+                <a href="/es/floating" class="nav-link">Floating</a>
+                <a href="/es/banner" class="nav-link" aria-current="page">Display</a>
+            </nav>
+            
+            <select class="language-switcher">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="pt">Português</option>
+                <option value="tr">Türkçe</option>
+            </select>
+        </div>
+    </header>
+
+    <main id="main-content" class="main">
+        <h1 class="page-title">Display</h1>
+        <p class="page-subtitle">Ubicaciones IAB clásicas con tamaño responsive.</p>
+        
+        <div class="content-section">
+            <!-- Top Leaderboard Banner -->
+            <div id="viads-slot" 
+                 data-viads-format="banner" 
+                 data-viads-lang="es" 
+                 data-viads-site="placeholder" 
+                 data-viads-page="banner"
+                 data-viads-position="top-leaderboard">
+                <div class="slot-leaderboard">
+                    Ranura de anuncio Viads - Banner superior (728x90)
+                </div>
+            </div>
+            <div id="viads-fallback" hidden></div>
+            
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>Área de Contenido Principal</h2>
+                    <p>Esta página demuestra el formato de anuncio banner estándar con dos zonas de ubicación: un banner superior leaderboard y un MPU (Rectángulo Medio) en la barra lateral derecha.</p>
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <div class="sidebar">
+                    <h3>Contenido de la Barra Lateral</h3>
+                    <p>Esta barra lateral contiene contenido adicional y demuestra la ubicación del banner MPU.</p>
+                    
+                    <!-- Secondary MPU Banner -->
+                    <div id="viads-slot-secondary" 
+                         data-viads-format="banner" 
+                         data-viads-lang="es" 
+                         data-viads-site="placeholder" 
+                         data-viads-page="banner"
+                         data-viads-position="mpu">
+                        <div class="slot-mpu">
+                            Ranura de anuncio Viads - MPU (300x250)
+                        </div>
+                    </div>
+                    
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacidad</a>
+                <a href="#" class="footer-link">Términos</a>
+            </div>
+            <div class="footer-copyright">
+                <span class="footer-year">2024</span> © Viads
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+    
+    <!-- Viads Production Loader (to be enabled by Viads) 
+    <script
+        id="viads-loader"
+        src="https://cdn.viads.com/loader.min.js"
+        data-site=""
+        data-lang=""
+        defer
+    ></script>
+    -->
+</body>
+</html>
