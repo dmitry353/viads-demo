@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/en/in-page.html"
+    },
+    {
+      "src": "/en",
+      "dest": "/en/in-page.html"
+    },
+    {
+      "src": "/es",
+      "dest": "/es/in-page.html"
+    },
+    {
+      "src": "/pt",
+      "dest": "/pt/in-page.html"
+    },
+    {
+      "src": "/tr",
+      "dest": "/tr/in-page.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "functions": {
+    "server.js": {
+      "maxDuration": 10
+    }
+  }
+}
