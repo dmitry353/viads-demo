@@ -12,20 +12,68 @@
       "dest": "/en/in-page.html"
     },
     {
-      "src": "/en",
+      "src": "/en/in-page",
       "dest": "/en/in-page.html"
     },
     {
-      "src": "/es",
+      "src": "/en/slider",
+      "dest": "/en/slider.html"
+    },
+    {
+      "src": "/en/floating",
+      "dest": "/en/floating.html"
+    },
+    {
+      "src": "/en/banner",
+      "dest": "/en/banner.html"
+    },
+    {
+      "src": "/es/in-page",
       "dest": "/es/in-page.html"
     },
     {
-      "src": "/pt",
+      "src": "/es/slider",
+      "dest": "/es/slider.html"
+    },
+    {
+      "src": "/es/floating",
+      "dest": "/es/floating.html"
+    },
+    {
+      "src": "/es/banner",
+      "dest": "/es/banner.html"
+    },
+    {
+      "src": "/pt/in-page",
       "dest": "/pt/in-page.html"
     },
     {
-      "src": "/tr",
+      "src": "/pt/slider",
+      "dest": "/pt/slider.html"
+    },
+    {
+      "src": "/pt/floating",
+      "dest": "/pt/floating.html"
+    },
+    {
+      "src": "/pt/banner",
+      "dest": "/pt/banner.html"
+    },
+    {
+      "src": "/tr/in-page",
       "dest": "/tr/in-page.html"
+    },
+    {
+      "src": "/tr/slider",
+      "dest": "/tr/slider.html"
+    },
+    {
+      "src": "/tr/floating",
+      "dest": "/tr/floating.html"
+    },
+    {
+      "src": "/tr/banner",
+      "dest": "/tr/banner.html"
     }
   ]
 }
