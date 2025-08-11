@@ -2,16 +2,10 @@
   "name": "viads-demo-pages",
   "version": "1.0.0",
   "description": "Demo pages for Viads ad integration",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "echo 'Static site - no build required'",
-    "dev": "node server.js"
+    "build": "echo 'Static site - no build required'"
   },
   "keywords": ["viads", "ads", "demo", "static-site"],
   "author": "dmitry@viads.com",
-  "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
-  }
+  "license": "MIT"
 }

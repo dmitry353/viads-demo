@@ -2,8 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "src": "**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -12,12 +12,20 @@
       "dest": "/en/in-page.html"
     },
     {
-      "src": "/(.*\\.(html|css|js|svg|xml|txt))",
-      "dest": "/$1"
+      "src": "/en",
+      "dest": "/en/in-page.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "src": "/es",
+      "dest": "/es/in-page.html"
+    },
+    {
+      "src": "/pt",
+      "dest": "/pt/in-page.html"
+    },
+    {
+      "src": "/tr",
+      "dest": "/tr/in-page.html"
     }
   ]
 }
