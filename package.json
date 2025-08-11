@@ -9,7 +9,7 @@
     "dev": "node server.js"
   },
   "keywords": ["viads", "ads", "demo", "static-site"],
-  "author": "Viads Team",
+  "author": "dmitry@viads.com",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"
