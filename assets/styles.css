@@ -32,23 +32,6 @@ body {
     min-height: 100vh;
 }
 
-/* Skip to content link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: var(--primary-color);
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    border-radius: 4px;
-    z-index: 1000;
-}
-
-.skip-link:focus {
-    top: 6px;
-}
-
 /* Header */
 .header {
     position: sticky;
