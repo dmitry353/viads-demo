@@ -12,29 +12,12 @@
       "dest": "/en/in-page.html"
     },
     {
-      "src": "/en",
-      "dest": "/en/in-page.html"
-    },
-    {
-      "src": "/es",
-      "dest": "/es/in-page.html"
-    },
-    {
-      "src": "/pt",
-      "dest": "/pt/in-page.html"
-    },
-    {
-      "src": "/tr",
-      "dest": "/tr/in-page.html"
+      "src": "/(.*\\.(html|css|js|svg|xml|txt))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
       "dest": "/server.js"
     }
-  ],
-  "functions": {
-    "server.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
