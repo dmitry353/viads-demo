@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>viads_logo_square</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="79.2797502%" y1="55.8472425%" x2="2.85239561%" y2="16.728413%" id="linearGradient-1">
+            <stop stop-color="#1018FF" offset="0%"></stop>
+            <stop stop-color="#57E1FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.0194717712%" y1="50.0247019%" x2="99.9992281%" y2="50.0247019%" id="linearGradient-2">
+            <stop stop-color="#1018FF" offset="0%"></stop>
+            <stop stop-color="#57E1FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="viads_logo_square" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(3.000000, 0.000000)" fill-rule="nonzero">
+            <path d="M1.22570562,25.1410045 L19.5884963,55.9223999 C22.6582638,61.0851906 30.1373335,61.0293766 33.151287,55.8386789 L52.8536126,21.7363533 C55.2257056,17.6340278 52.2954731,12.4712371 47.52338,12.4433301 L8.70477539,12.1642603 C1.979194,12.0805394 -2.20685252,19.3921673 1.22570562,25.1410045 Z" id="Path" fill="url(#linearGradient-1)"></path>
+            <path d="M50.5931475,13.1410045 L28.351287,0.722399859 C24.6117521,-1.3706234 20.0350079,1.33635335 20.0350079,5.60612079 L20.0350079,33.5968185 C20.0350079,36.9735626 23.6908219,39.0944929 26.6210545,37.4200743 L50.6210545,23.8014696 C54.751287,21.4572836 54.751287,15.4851906 50.5931475,13.1410045 Z" id="Path" fill="url(#linearGradient-2)"></path>
+        </g>
+    </g>
+</svg>

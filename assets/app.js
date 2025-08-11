@@ -53,16 +53,61 @@
         const currentLang = getCurrentLanguage();
         languageSelect.value = currentLang;
 
-        // Handle language change
-        languageSelect.addEventListener('change', function(e) {
-            const newLang = e.target.value;
-            const currentFormat = getCurrentFormat();
-            
-            if (newLang && newLang !== currentLang) {
-                const newUrl = `/${newLang}/${currentFormat}`;
-                window.location.href = newUrl;
-            }
+        // Handle language change for both desktop and mobile
+        const events = ['change', 'input', 'touchend'];
+        
+        events.forEach(eventType => {
+            languageSelect.addEventListener(eventType, function(e) {
+                const newLang = e.target.value;
+                const currentFormat = getCurrentFormat();
+                
+                if (newLang && newLang !== currentLang) {
+                    const newUrl = `/${newLang}/${currentFormat}`;
+                    window.location.href = newUrl;
+                }
+            });
         });
+
+        // Additional mobile support - handle click events
+        languageSelect.addEventListener('click', function(e) {
+            // Prevent default to avoid conflicts
+            e.preventDefault();
+            // Focus the select to open options
+            this.focus();
+        });
+
+        // Handle touch events for mobile
+        languageSelect.addEventListener('touchstart', function(e) {
+            // Ensure the select is interactive on mobile
+            this.style.webkitAppearance = 'none';
+            this.style.appearance = 'none';
+        });
+
+        // Mobile-specific handling
+        if ('ontouchstart' in window) {
+            // This is a touch device
+            languageSelect.addEventListener('touchend', function(e) {
+                // Force the select to open on mobile
+                setTimeout(() => {
+                    this.focus();
+                }, 100);
+            });
+        }
+
+        // Fallback for mobile devices that don't trigger change events properly
+        let lastValue = currentLang;
+        setInterval(() => {
+            if (languageSelect.value !== lastValue) {
+                const newLang = languageSelect.value;
+                const currentFormat = getCurrentFormat();
+                
+                if (newLang && newLang !== lastValue) {
+                    lastValue = newLang;
+                    const newUrl = `/${newLang}/${currentFormat}`;
+                    window.location.href = newUrl;
+                }
+            }
+        }, 500);
     }
 
     // Highlight active format in navigation
