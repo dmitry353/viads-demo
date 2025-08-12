@@ -176,6 +176,25 @@ body {
     line-height: 1.7;
 }
 
+/* Headings */
+.content-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--accent-color);
+}
+
+.content-section h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
 /* Ad slot utilities */
 .slot-reserved {
     min-height: 280px;
