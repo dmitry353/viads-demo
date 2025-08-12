@@ -3,22 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banner estándar - Viads Demo</title>
-    <meta name="description" content="Ubicaciones IAB clásicas con tamaño responsive. Página de demostración para la integración de anuncios Viads.">
+    <title>Últimas Noticias: Revolución de IA en Marketing Digital - Portal de Noticias</title>
+    <meta name="description" content="Últimos desarrollos en inteligencia artificial transformando el panorama de la publicidad digital. Cobertura integral de tendencias de publicidad programática.">
     <meta name="canonical" content="/es/banner">
-    <meta property="og:title" content="Banner estándar - Viads Demo">
-    <meta property="og:description" content="Ubicaciones IAB clásicas con tamaño responsive. Página de demostración para la integración de anuncios Viads.">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="Últimas Noticias: Revolución de IA en Marketing Digital">
+    <meta property="og:description" content="Últimos desarrollos en inteligencia artificial transformando el panorama de la publicidad digital.">
+    <meta property="og:type" content="article">
     <meta property="og:url" content="/es/banner">
-    <link rel="stylesheet" href="../assets/styles.css">
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+    <style>
+        /* News Portal Layout */
+        .news-container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+
+        
+        /* Ad Containers */
+        .ad-container {
+            background: #f9fafb;
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin: 1.5rem 0;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .ad-top-leaderboard {
+            width: 100%;
+            height: 90px;
+            margin: 1rem 0;
+        }
+        
+        .ad-bottom-leaderboard {
+            width: 100%;
+            height: 90px;
+            margin: 1rem 0;
+        }
+        
+        .ad-in-article {
+            width: 100%;
+            height: 250px;
+            margin: 2rem 0;
+        }
+        
+        .ad-sidebar-top {
+            width: 300px;
+            height: 600px;
+            margin: 1rem 0;
+        }
+        
+        .ad-sidebar-bottom {
+            width: 300px;
+            height: 250px;
+            margin: 1rem 0;
+        }
+        
+        /* Main Content Layout */
+        .news-main {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .news-content {
+            max-width: 100%;
+        }
+        
+        .news-sidebar {
+            position: sticky;
+            top: 2rem;
+        }
+        
+        /* Article Styles */
+        .article-hero {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-lead {
+            font-size: 1.25rem;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .article-text {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Sidebar Content */
+        .sidebar-section {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-section h3 {
+            color: #111827;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .sidebar-section p {
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .news-main {
+                grid-template-columns: 1fr;
+            }
+            
+            .ad-top-leaderboard,
+            .ad-bottom-leaderboard {
+                height: 60px;
+            }
+            
+            .ad-sidebar-top {
+                width: 100%;
+                height: 120px;
+            }
+            
+            .ad-sidebar-bottom {
+                width: 100%;
+                max-width: 300px;
+                margin: 1rem auto;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
             <a href="/" class="logo">
-                <img src="../assets/logo.svg" alt="Viads" width="120" height="35" class="logo-desktop">
-                <img src="../assets/logo_mobile.svg" alt="Viads" width="80" height="25" class="logo-mobile">
+                <img src="../../assets/logo.svg" alt="Viads" width="120" height="35" class="logo-desktop">
+                <img src="../../assets/logo_mobile.svg" alt="Viads" width="80" height="25" class="logo-mobile">
             </a>
             
             <nav class="nav">
@@ -30,66 +192,153 @@
             
             <select class="language-switcher">
                 <option value="en">EN</option>
-                <option value="es">ES</option>
+                <option value="es" selected>ES</option>
                 <option value="pt">PT</option>
                 <option value="tr">TR</option>
             </select>
         </div>
     </header>
 
-    <main class="main">
-        <h1 class="page-title">Display</h1>
-        <p class="page-subtitle">Ubicaciones IAB clásicas con tamaño responsive.</p>
-        
-        <div class="content-section">
-            <!-- Top Leaderboard Banner -->
-            <div id="viads-slot" 
-                 data-viads-format="banner" 
-                 data-viads-lang="es" 
-                 data-viads-site="placeholder" 
-                 data-viads-page="banner"
-                 data-viads-position="top-leaderboard">
-                <div class="slot-leaderboard">
-                    Ranura de anuncio Viads - Banner superior (728x90)
-                </div>
-            </div>
-            <div id="viads-fallback" hidden></div>
-            
-            <div class="content-grid">
-                <div class="main-content">
-                    <h2>Área de Contenido Principal</h2>
-                    <p>Esta página demuestra el formato de anuncio banner estándar con dos zonas de ubicación: un banner superior leaderboard y un MPU (Rectángulo Medio) en la barra lateral derecha.</p>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="news-container">
+
+
+        <!-- Top Leaderboard Ad -->
+        <div id="ad-top-leaderboard" 
+             class="ad-container ad-top-leaderboard"
+             data-viads-format="banner" 
+             data-viads-position="top-leaderboard">
+            Anuncio 970×90 (Top Leaderboard)
+        </div>
+
+        <!-- Main Content -->
+        <main class="news-main">
+            <article class="news-content">
+                <h1 class="article-title">Revolución de IA en Marketing Digital: Cómo el Machine Learning está Transformando la Publicidad</h1>
+                
+                <p class="article-lead">
+                    La inteligencia artificial está transformando fundamentalmente el panorama de la publicidad digital, desde la compra programática hasta la optimización creativa. Este análisis integral explora los últimos desarrollos y sus implicaciones para los especialistas en marketing de todo el mundo.
+                </p>
+                
+                <div class="article-hero">
+                    Viads Image Placeholder
                 </div>
                 
-                <div class="sidebar">
-                    <h3>Contenido de la Barra Lateral</h3>
-                    <p>Esta barra lateral contiene contenido adicional y demuestra la ubicación del banner MPU.</p>
-                    
-                    <!-- Secondary MPU Banner -->
-                    <div id="viads-slot-secondary" 
-                         data-viads-format="banner" 
-                         data-viads-lang="es" 
-                         data-viads-site="placeholder" 
-                         data-viads-page="banner"
-                         data-viads-position="mpu">
-                        <div class="slot-mpu">
-                            Ranura de anuncio Viads - MPU (300x250)
-                        </div>
-                    </div>
-                    
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <p class="article-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                
+                <p class="article-text">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                
+                <!-- In-Article Ad 1 (after 2nd paragraph) -->
+                <div id="ad-in-article-1" 
+                     class="ad-container ad-in-article"
+                     data-viads-format="in-article" 
+                     data-viads-position="paragraph-1">
+                    Anuncio 300×250 (In-Article 1)
                 </div>
-            </div>
+                
+                <p class="article-text">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+                
+                <p class="article-text">
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                </p>
+                
+                <!-- In-Article Ad 2 (after 5th paragraph) -->
+                <div id="ad-in-article-2" 
+                     class="ad-container ad-in-article"
+                     data-viads-format="in-article" 
+                     data-viads-position="paragraph-2">
+                    Anuncio 300×250 (In-Article 2)
+                </div>
+                
+                <p class="article-text">
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+                </p>
+                
+                <p class="article-text">
+                    Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                </p>
+                
+                <p class="article-text">
+                    Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                </p>
+                
+                <!-- In-Article Ad 3 (after 8th paragraph) -->
+                <div id="ad-in-article-3" 
+                     class="ad-container ad-in-article"
+                     data-viads-format="in-article" 
+                     data-viads-position="paragraph-3">
+                    Anuncio 300×250 (In-Article 3)
+                </div>
+                
+                <p class="article-text">
+                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                </p>
+                
+                <p class="article-text">
+                    Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                </p>
+                
+                <p class="article-text">
+                    La integración de la IA en el marketing digital representa un cambio de paradigma que requiere que los especialistas en marketing adapten sus estrategias y adopten nuevas tecnologías. Aquellos que naveguen exitosamente esta transformación obtendrán ventajas competitivas significativas.
+                </p>
+            </article>
+            
+            <aside class="news-sidebar">
+                <!-- Sidebar Top Ad -->
+                <div id="ad-sidebar-top" 
+                     class="ad-container ad-sidebar-top"
+                     data-viads-format="sidebar" 
+                     data-viads-position="top">
+                    Anuncio 300×600 (Sidebar Top)
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Temas de Tendencia</h3>
+                    <p>Mantente actualizado con los últimos desarrollos en marketing digital y tecnología de IA.</p>
+                    <ul>
+                        <li>Publicidad Programática</li>
+                        <li>Machine Learning</li>
+                        <li>Privacidad de Datos</li>
+                        <li>Optimización Creativa</li>
+                    </ul>
+                </div>
+                
+                <!-- Sidebar Bottom Ad -->
+                <div id="ad-sidebar-bottom" 
+                     class="ad-container ad-sidebar-bottom"
+                     data-viads-format="sidebar" 
+                     data-viads-position="bottom">
+                    Anuncio 300×250 (Sidebar Bottom)
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Suscríbete al Boletín</h3>
+                    <p>Recibe las últimas ideas directamente en tu bandeja de entrada.</p>
+                    <input type="email" placeholder="Ingresa tu email" style="width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #d1d5db; border-radius: 4px;">
+                    <button style="width: 100%; padding: 8px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer;">Suscribirse</button>
+                </div>
+            </aside>
+        </main>
+        
+        <!-- Bottom Leaderboard Ad -->
+        <div id="ad-bottom-leaderboard" 
+             class="ad-container ad-bottom-leaderboard"
+             data-viads-format="banner" 
+             data-viads-position="bottom-leaderboard">
+            Anuncio 970×90 (Bottom Leaderboard)
         </div>
-    </main>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#" class="footer-link">Privacidad</a>
-                <a href="#" class="footer-link">Términos</a>
+                <a href="#" class="footer-link">Política de Privacidad</a>
+                <a href="#" class="footer-link">Términos de Servicio</a>
             </div>
             <div class="footer-copyright">
                 <span class="footer-year">2024</span> © Viads
@@ -97,7 +346,7 @@
         </div>
     </footer>
 
-    <script src="../assets/app.js"></script>
+    <script src="../../assets/app.js"></script>
     
     <!-- Viads Production Loader (to be enabled by Viads) 
     <script
