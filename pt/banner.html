@@ -91,15 +91,36 @@
         .article-hero {
             width: 100%;
             height: 400px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #6b7280;
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 2rem;
+            border: 2px dashed #d1d5db;
+            position: relative;
+        }
+        
+        .ad-in-image {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 120px;
+            background: #e6f3ff;
+            border: 2px dashed #4a90e2;
+            border-radius: 8px 0 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c5aa0;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-align: center;
+            line-height: 1.2;
         }
         
         .article-title {
@@ -217,6 +238,12 @@
                 
                 <div class="article-hero">
                     Viads Image Placeholder
+                    <div id="ad-in-image" 
+                         class="ad-in-image"
+                         data-viads-format="in-image" 
+                         data-viads-position="hero-corner">
+                        Viads Anúncio 200×120<br>(In-Image)
+                    </div>
                 </div>
                 
                 <p class="article-text">
