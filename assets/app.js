@@ -41,6 +41,9 @@
                 // The active state will be updated on page load
             });
         });
+        
+        // Initialize mobile dropdown menu
+        initializeMobileDropdown();
     }
 
     // Initialize language switcher
@@ -202,6 +205,81 @@
         if (yearElement) {
             yearElement.textContent = new Date().getFullYear();
         }
+    }
+
+    // Initialize mobile dropdown menu
+    function initializeMobileDropdown() {
+        const mobileDropdown = document.querySelector('.mobile-dropdown');
+        console.log('Mobile dropdown element:', mobileDropdown); // Debug log
+        
+        if (!mobileDropdown) {
+            console.warn('Mobile dropdown element not found!'); // Debug log
+            return;
+        }
+        
+        const toggle = mobileDropdown.querySelector('.mobile-dropdown-toggle');
+        const menu = mobileDropdown.querySelector('.mobile-dropdown-menu');
+        
+        console.log('Toggle button:', toggle); // Debug log
+        console.log('Menu:', menu); // Debug log
+        
+        if (!toggle || !menu) {
+            console.warn('Toggle button or menu not found!'); // Debug log
+            return;
+        }
+        
+        console.log('Mobile dropdown initialized successfully'); // Debug log
+        
+        // Toggle dropdown on click
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const isActive = mobileDropdown.classList.contains('active');
+            console.log('Toggle clicked, current state:', isActive); // Debug log
+            
+            if (isActive) {
+                mobileDropdown.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            } else {
+                mobileDropdown.classList.add('active');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileDropdown.contains(e.target)) {
+                mobileDropdown.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                mobileDropdown.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Highlight active format in mobile dropdown
+        highlightActiveFormatInMobileDropdown();
+    }
+    
+    // Highlight active format in mobile dropdown
+    function highlightActiveFormatInMobileDropdown() {
+        const currentFormat = getCurrentFormat();
+        const mobileDropdownItems = document.querySelectorAll('.mobile-dropdown-item');
+        
+        mobileDropdownItems.forEach(item => {
+            const href = item.getAttribute('href');
+            if (href && href.includes(`/${currentFormat}`)) {
+                item.setAttribute('aria-current', 'page');
+            } else {
+                item.removeAttribute('aria-current');
+            }
+        });
     }
 
     // Call footer year update
